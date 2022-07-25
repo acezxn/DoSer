@@ -23,6 +23,7 @@ Examples:
 - Ping of death
 - Smurf attack
 - Man in the middle
+- IP fragmentation (Teardrop attack)
 
 ### Deauthentication
 It is a type of attack such that a hacker forces deconnection of an internet user out of his network. This type of attack does not require internet connection and encryption.
@@ -50,3 +51,6 @@ The attacker spoofs the victim's IP address, sending massive amount of ICMP broa
 
 ### Man in the middle
 The attacker uses ARP spoofing to sit in the middle of the victim's connection, but does not forward the Internet.
+
+### IP fragmentation attack (Teardrop attack)
+The attacker sends fragmented packets to the victim, and using a bug in the IP reassembly, the attacker prevents the victum from reassemble the fragments and causes them to overlap. This could result the victim system to crash.
