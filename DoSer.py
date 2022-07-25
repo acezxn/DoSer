@@ -1,4 +1,4 @@
-import Deauther, SYNFlooder, UDPFlooder, ICMPFlooder, Smurf
+import Scripts.Deauther as Deauther, Scripts.SYNFlooder as SYNFlooder, Scripts.UDPFlooder as UDPFlooder, Scripts.ICMPFlooder as ICMPFlooder, Scripts.Smurf as Smurf
 
 def list_choice(choices=list()):
     menu = """
