@@ -31,7 +31,7 @@ Examples:
 ### Deauthentication
 It is a type of attack such that a hacker forces deconnection of an internet user out of his network. This type of attack does not require internet connection and encryption.
 
-#### Methodology:
+**Methodology:**
 - The hacker sends deauthentication frame to the gateway with the spoofed MAC address of the victim. 
 - The gateway believes that the victim requests deauthentication, and closes the connection.
 
