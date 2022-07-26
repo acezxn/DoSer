@@ -2,7 +2,9 @@
 
 Implementation of different DoS techniques
 
-Note: The project is under development
+The project is under development
+
+Note: Not all of the attacks are guaranteed to work, especially to systems that has vulnerabilities fixed and protection setted. Please be understood each DoS attack before using them, since the project is only for educational purpose only.
 
 ## What is it
 
